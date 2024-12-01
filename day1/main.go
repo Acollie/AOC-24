@@ -2,6 +2,7 @@ package main
 
 import (
 	"AOC-24/pkg"
+	"fmt"
 	"math"
 	"slices"
 )
@@ -25,6 +26,10 @@ func main() {
 		list2 = append(list2, numbers[1])
 	}
 
+	fmt.Println(calculateDiff(list1, list2))
+}
+
+func calculateDiff(list1, list2 []int) int {
 	slices.Sort(list1)
 	slices.Sort(list2)
 
@@ -36,5 +41,5 @@ func main() {
 
 		totalDiff += diff
 	}
-	println(totalDiff)
+	return totalDiff
 }
